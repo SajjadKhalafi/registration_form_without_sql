@@ -1,3 +1,6 @@
+<?php
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,7 +54,7 @@
                         <div class="row">
                             <div class="col">
                                 <div class="form-group">
-                                    <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
+                                    <label for="re_pass"><i class="zmdi zmdi-lock-outline"></i></label>
                                     <input type="password" name="password_confirm" id="re_pass" placeholder="Repeat your password"/>
                                 </div>
                             </div>
