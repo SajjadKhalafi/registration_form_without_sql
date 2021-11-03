@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST"){
         $messageError['password'] = REQUIRE_FIELD_ERROR;
     if (!$password_confirm)
         $messageError['password_confirm'] = REQUIRE_FIELD_ERROR;
-    elseif ($password && $password_confirm && strcmp($password,$password_confirm) !== 0)
+    elseif ($password && strcmp($password,$password_confirm) !== 0)
         $messageError['password_confirm'] = "Please repeat your password correctly";
 }
 function post_data($field){
@@ -102,11 +102,11 @@ function post_data($field){
                             </div>
                         </div>
                         <div class="form-group">
-                            <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
+                            <input type="checkbox" name="agree-term" id="agree-term" class="agree-term checkbox" />
                             <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
                         </div>
                         <div class="form-group form-button">
-                            <input type="submit" name="signup" id="signup" class="form-submit" value="Register"/>
+                            <input type="submit" name="signup" id="signup" class="form-submit delete" value="Register" disabled="disabled"/>
                         </div>
                     </form>
                 </div>
@@ -122,5 +122,12 @@ function post_data($field){
 <!-- JS -->
 <script src="frontEnd/vendor/jquery/jquery.min.js"></script>
 <script src="frontEnd/js/main.js"></script>
+<script>
+    $(function() {
+        $(".checkbox").click(function(){
+            $('.delete').prop('disabled',$('input.checkbox:checked').length === 0);
+        });
+    });
+</script>
 </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 </html>
