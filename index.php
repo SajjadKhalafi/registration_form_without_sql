@@ -62,6 +62,9 @@ function post_data($field){
                                 <div class="form-group">
                                     <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
                                     <input type="text" name="username" id="name" placeholder="Your Name" class="form-control <?= isset($messageError['username']) ? 'is-invalid' : '' ; ?> " value="<?= $username; ?>"/>
+                                    <div class="invalid-feedback">
+                                        <?= $messageError['username'] ?? ""; ?>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -70,6 +73,9 @@ function post_data($field){
                                 <div class="form-group">
                                     <label for="email"><i class="zmdi zmdi-email"></i></label>
                                     <input type="email" name="email" id="email" placeholder="Your Email" class="form-control <?= isset($messageError['email']) ? 'is-invalid' : '' ; ?> " value="<?= $email; ?>"/>
+                                    <div class="invalid-feedback">
+                                        <?= $messageError['email'] ?? ""; ?>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -78,6 +84,9 @@ function post_data($field){
                                 <div class="form-group">
                                     <label for="pass"><i class="zmdi zmdi-lock"></i></label>
                                     <input type="password" name="password" id="pass" placeholder="Password" class="form-control <?= isset($messageError['password']) ? 'is-invalid' : '' ; ?> " value="<?= $password; ?>"/>
+                                    <div class="invalid-feedback">
+                                        <?= $messageError['password'] ?? ""; ?>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -86,6 +95,9 @@ function post_data($field){
                                 <div class="form-group">
                                     <label for="re_pass"><i class="zmdi zmdi-lock-outline"></i></label>
                                     <input type="password" name="password_confirm" id="re_pass" placeholder="Repeat your password" class="form-control <?= isset($messageError['password_confirm']) ? 'is-invalid' : '' ; ?> " value="<?= $password_confirm; ?>"/>
+                                    <div class="invalid-feedback">
+                                        <?= $messageError['password_confirm'] ?? ""; ?>
+                                    </div>
                                 </div>
                             </div>
                         </div>
