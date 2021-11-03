@@ -23,49 +23,37 @@
             <div class="signup-content">
                 <div class="signup-form">
                     <h2 class="form-title">Sign up</h2>
-                    <form method="POST" class="register-form" id="register-form" novalidate>
+                    <form method="POST" class="register-form" id="register-form">
                         <div class="row">
                             <div class="col">
                                 <div class="form-group">
                                     <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                    <input type="text" name="username" id="name" placeholder="Your Name" class="form-control <?= isset($messageError['username']) ? 'is-invalid' : '' ;?>" value="<?= $username; ?>"/>
+                                    <input type="text" id="name" placeholder="Your Name" class="form-control"/>
                                 </div>
-                                <p class="invalid-feedback">
-                                <h6><?= $messageError['username'] ?? ''; ?></h6>
-                                </p>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col">
                                 <div class="form-group">
                                     <label for="email"><i class="zmdi zmdi-email"></i></label>
-                                    <input type="email" name="email" id="email" placeholder="Your Email" class="form-control <?= isset($messageError['email']) ? 'is-invalid' : '' ;?>" value="<?= $email; ?>"/>
+                                    <input type="email" id="email" placeholder="Your Email" class="form-control"/>
                                 </div>
-                                <p class="invalid-feedback">
-                                <h6><?= $messageError['email'] ?? ''; ?></h6>
-                                </p>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col">
                                 <div class="form-group">
                                     <label for="pass"><i class="zmdi zmdi-lock"></i></label>
-                                    <input type="password" name="password" id="pass" placeholder="Password" class="form-control <?= isset($messageError['password']) ? 'is-invalid' : '' ;?>" value="<?= $password; ?>"/>
+                                    <input type="password" id="pass" placeholder="Password"/>
                                 </div>
-                                <p class="invalid-feedback">
-                                <h6><?= $messageError['password'] ?? ''; ?></h6>
-                                </p>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col">
                                 <div class="form-group">
                                     <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
-                                    <input type="password" name="password_confirm" id="re_pass" placeholder="Repeat your password" class="form-control <?= isset($messageError['password_confirm']) ? 'is-invalid' : '' ;?>" value="<?= $password_confirm; ?>"/>
+                                    <input type="password" id="re_pass" placeholder="Repeat your password"/>
                                 </div>
-                                <p class="invalid-feedback">
-                                <h6><?= $messageError['password_confirm'] ?? ''; ?></h6>
-                                </p>
                             </div>
                         </div>
                         <div class="form-group">
