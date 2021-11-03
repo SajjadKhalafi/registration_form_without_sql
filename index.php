@@ -64,7 +64,7 @@ function post_data($field){
                     <div class="signup-form">
                         <h2 class="form-title">Sign up</h2>
                         <form action="<?= $_SERVER['PHP_SELF']; ?>" method="post" class="register-form" id="register-form" novalidate>
-                            <div class="row">
+                            <div class="row my-3">
                                 <div class="col">
                                     <div class="form-group">
                                         <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
@@ -75,7 +75,7 @@ function post_data($field){
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="row my-3">
                                 <div class="col">
                                     <div class="form-group">
                                         <label for="email"><i class="zmdi zmdi-email"></i></label>
@@ -86,7 +86,7 @@ function post_data($field){
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="row my-3">
                                 <div class="col">
                                     <div class="form-group">
                                         <label for="pass"><i class="zmdi zmdi-lock"></i></label>
@@ -97,7 +97,7 @@ function post_data($field){
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="row my-3">
                                 <div class="col">
                                     <div class="form-group">
                                         <label for="re_pass"><i class="zmdi zmdi-lock-outline"></i></label>
