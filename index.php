@@ -13,6 +13,8 @@ if ($_SERVER['REQUEST_METHOD'] === "POST"){
         $messageError['username'] = "This field must be between 6 and 16 characters long";
     if (!$email)
         $messageError['email'] = REQUIRE_FIELD_ERROR;
+    elseif (!filter_var($email,FILTER_VALIDATE_EMAIL))
+        $messageError['email'] = "Enter your email correctly";
     if (!$password)
         $messageError['password'] = REQUIRE_FIELD_ERROR;
     if (!$password_confirm)
