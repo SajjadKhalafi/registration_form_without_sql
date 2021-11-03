@@ -2,6 +2,14 @@
 const REQUIRE_FIELD_ERROR = "This field is required";
 $username = $email = $password = $password_confirm = "";
 $messageError = [];
+function post_data($field){
+    if (!isset($_POST[$field])){
+        return false;
+    }
+    $data = $_POST[$field];
+    return htmlspecialchars(stripslashes(trim($data)));
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
