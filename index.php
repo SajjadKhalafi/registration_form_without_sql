@@ -40,11 +40,11 @@ function post_data($field){
     <title>Sign Up Form by Colorlib</title>
 
     <!-- Font Icon -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="frontEnd/fonts/material-icon/css/material-design-iconic-font.min.css">
-
     <!-- Main css -->
     <link rel="stylesheet" href="frontEnd/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+
 </head>
 <body>
 
@@ -56,12 +56,12 @@ function post_data($field){
             <div class="signup-content">
                 <div class="signup-form">
                     <h2 class="form-title">Sign up</h2>
-                    <form method="POST" class="register-form" id="register-form" novalidate>
+                    <form action="<?= $_SERVER['PHP_SELF']; ?>" method="post" class="register-form" id="register-form" novalidate>
                         <div class="row">
                             <div class="col">
                                 <div class="form-group">
                                     <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                    <input type="text" name="username" id="name" placeholder="Your Name" class="form-control" value="<?= $username; ?>"/>
+                                    <input type="text" name="username" id="name" placeholder="Your Name" class="form-control <?= isset($messageError['username']) ? 'is-invalid' : '' ; ?> " value="<?= $username; ?>"/>
                                 </div>
                             </div>
                         </div>
@@ -69,7 +69,7 @@ function post_data($field){
                             <div class="col">
                                 <div class="form-group">
                                     <label for="email"><i class="zmdi zmdi-email"></i></label>
-                                    <input type="email" name="email" id="email" placeholder="Your Email" class="form-control" value="<?= $email; ?>"/>
+                                    <input type="email" name="email" id="email" placeholder="Your Email" class="form-control <?= isset($messageError['email']) ? 'is-invalid' : '' ; ?> " value="<?= $email; ?>"/>
                                 </div>
                             </div>
                         </div>
@@ -77,7 +77,7 @@ function post_data($field){
                             <div class="col">
                                 <div class="form-group">
                                     <label for="pass"><i class="zmdi zmdi-lock"></i></label>
-                                    <input type="password" name="password" id="pass" placeholder="Password" value="<?= $password; ?>"/>
+                                    <input type="password" name="password" id="pass" placeholder="Password" class="form-control <?= isset($messageError['password']) ? 'is-invalid' : '' ; ?> " value="<?= $password; ?>"/>
                                 </div>
                             </div>
                         </div>
@@ -85,7 +85,7 @@ function post_data($field){
                             <div class="col">
                                 <div class="form-group">
                                     <label for="re_pass"><i class="zmdi zmdi-lock-outline"></i></label>
-                                    <input type="password" name="password_confirm" id="re_pass" placeholder="Repeat your password" value="<?= $password_confirm; ?>"/>
+                                    <input type="password" name="password_confirm" id="re_pass" placeholder="Repeat your password" class="form-control <?= isset($messageError['password_confirm']) ? 'is-invalid' : '' ; ?> " value="<?= $password_confirm; ?>"/>
                                 </div>
                             </div>
                         </div>
