@@ -3,7 +3,10 @@ const REQUIRE_FIELD_ERROR = "This field is required";
 $username = $email = $password = $password_confirm = "";
 $messageError = [];
 if ($_SERVER['REQUEST_METHOD'] === "POST"){
-
+    $username = post_data('username');
+    $email = post_data('email');
+    $password = post_data('password');
+    $password_confirm = post_data('password_confirm');
 }
 function post_data($field){
     if (!isset($_POST[$field])){
