@@ -47,7 +47,7 @@ function post_data($field){
                             <div class="col">
                                 <div class="form-group">
                                     <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                    <input type="text" name="username" id="name" placeholder="Your Name" class="form-control"/>
+                                    <input type="text" name="username" id="name" placeholder="Your Name" class="form-control" value="<?= $username; ?>"/>
                                 </div>
                             </div>
                         </div>
@@ -55,7 +55,7 @@ function post_data($field){
                             <div class="col">
                                 <div class="form-group">
                                     <label for="email"><i class="zmdi zmdi-email"></i></label>
-                                    <input type="email" name="email" id="email" placeholder="Your Email" class="form-control"/>
+                                    <input type="email" name="email" id="email" placeholder="Your Email" class="form-control" value="<?= $email; ?>"/>
                                 </div>
                             </div>
                         </div>
@@ -63,7 +63,7 @@ function post_data($field){
                             <div class="col">
                                 <div class="form-group">
                                     <label for="pass"><i class="zmdi zmdi-lock"></i></label>
-                                    <input type="password" name="password" id="pass" placeholder="Password"/>
+                                    <input type="password" name="password" id="pass" placeholder="Password" value="<?= $password; ?>"/>
                                 </div>
                             </div>
                         </div>
@@ -71,7 +71,7 @@ function post_data($field){
                             <div class="col">
                                 <div class="form-group">
                                     <label for="re_pass"><i class="zmdi zmdi-lock-outline"></i></label>
-                                    <input type="password" name="password_confirm" id="re_pass" placeholder="Repeat your password"/>
+                                    <input type="password" name="password_confirm" id="re_pass" placeholder="Repeat your password" value="<?= $password_confirm; ?>"/>
                                 </div>
                             </div>
                         </div>
