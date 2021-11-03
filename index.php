@@ -1,5 +1,5 @@
 <?php
-
+const REQUIRE_FIELD_ERROR = "This field is required";
 ?>
 <!DOCTYPE html>
 <html lang="en">
