@@ -19,6 +19,8 @@ if ($_SERVER['REQUEST_METHOD'] === "POST"){
         $messageError['password'] = REQUIRE_FIELD_ERROR;
     if (!$password_confirm)
         $messageError['password_confirm'] = REQUIRE_FIELD_ERROR;
+    elseif ($password && $password_confirm && strcmp($password,$password_confirm) !== 0)
+        $messageError['password_confirm'] = "Please repeat your password correctly";
 }
 function post_data($field){
     if (!isset($_POST[$field])){
