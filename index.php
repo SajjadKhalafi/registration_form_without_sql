@@ -8,10 +8,10 @@
 
     <!-- Font Icon -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="frontEnd/fonts/material-icon/css/material-design-iconic-font.min.css">
 
     <!-- Main css -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="frontEnd/css/style.css">
 </head>
 <body>
 
@@ -28,7 +28,7 @@
                             <div class="col">
                                 <div class="form-group">
                                     <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                    <input type="text" id="name" placeholder="Your Name" class="form-control"/>
+                                    <input type="text" name="username" id="name" placeholder="Your Name" class="form-control"/>
                                 </div>
                             </div>
                         </div>
@@ -36,7 +36,7 @@
                             <div class="col">
                                 <div class="form-group">
                                     <label for="email"><i class="zmdi zmdi-email"></i></label>
-                                    <input type="email" id="email" placeholder="Your Email" class="form-control"/>
+                                    <input type="email" name="email" id="email" placeholder="Your Email" class="form-control"/>
                                 </div>
                             </div>
                         </div>
@@ -44,7 +44,7 @@
                             <div class="col">
                                 <div class="form-group">
                                     <label for="pass"><i class="zmdi zmdi-lock"></i></label>
-                                    <input type="password" id="pass" placeholder="Password"/>
+                                    <input type="password" name="password" id="pass" placeholder="Password"/>
                                 </div>
                             </div>
                         </div>
@@ -52,7 +52,7 @@
                             <div class="col">
                                 <div class="form-group">
                                     <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
-                                    <input type="password" id="re_pass" placeholder="Repeat your password"/>
+                                    <input type="password" name="password_confirm" id="re_pass" placeholder="Repeat your password"/>
                                 </div>
                             </div>
                         </div>
@@ -66,7 +66,7 @@
                     </form>
                 </div>
                 <div class="signup-image">
-                    <figure><img src="images/signup-image.jpg" alt="sing up image"></figure>
+                    <figure><img src="frontEnd/images/signup-image.jpg" alt="sing up image"></figure>
                     <a href="#" class="signup-image-link">I am already member</a>
                 </div>
             </div>
@@ -75,7 +75,7 @@
 </div>
 
 <!-- JS -->
-<script src="vendor/jquery/jquery.min.js"></script>
-<script src="js/main.js"></script>
+<script src="frontEnd/vendor/jquery/jquery.min.js"></script>
+<script src="frontEnd/js/main.js"></script>
 </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 </html>
