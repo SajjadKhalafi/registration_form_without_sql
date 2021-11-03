@@ -7,6 +7,14 @@ if ($_SERVER['REQUEST_METHOD'] === "POST"){
     $email = post_data('email');
     $password = post_data('password');
     $password_confirm = post_data('password_confirm');
+    if (!$username)
+        $messageError['username'] = REQUIRE_FIELD_ERROR;
+    if (!$email)
+        $messageError['email'] = REQUIRE_FIELD_ERROR;
+    if (!$password)
+        $messageError['password'] = REQUIRE_FIELD_ERROR;
+    if (!$password_confirm)
+        $messageError['password_confirm'] = REQUIRE_FIELD_ERROR;
 }
 function post_data($field){
     if (!isset($_POST[$field])){
