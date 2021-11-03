@@ -1,6 +1,7 @@
 <?php
 const REQUIRE_FIELD_ERROR = "This field is required";
 $username = $email = $password = $password_confirm = "";
+$messageError = [];
 ?>
 <!DOCTYPE html>
 <html lang="en">
