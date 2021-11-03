@@ -1,5 +1,6 @@
+.idea/
 __MACOSX/
 colorlib-regform-7/
-frontEnd/.edea/
+frontEnd/.idea/
 frontEnd/.sass-cache/
 frontEnd/vendor/
