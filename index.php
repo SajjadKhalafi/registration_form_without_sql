@@ -56,7 +56,7 @@ function post_data($field){
             <div class="signup-content">
                 <div class="signup-form">
                     <h2 class="form-title">Sign up</h2>
-                    <form method="POST" class="register-form" id="register-form">
+                    <form method="POST" class="register-form" id="register-form" novalidate>
                         <div class="row">
                             <div class="col">
                                 <div class="form-group">
